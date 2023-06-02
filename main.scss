@@ -1,15 +1,9 @@
 @import "variables";
 
-.button-dada{
-  padding: 5px 10px;
-  border-radius: 3px;
-  font-weight: bold;
-  background-color: green;
+%placeholder{
+  padding: 20px 30px;
 }
-.child{
-  /*padding: 5px 10px;
-  border-radius: 3px;
-  font-weight: bold;*/
-  @extend .button-dada;
+.button{
+  @extend %placeholder;
   background-color: red;
 }
