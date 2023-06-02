@@ -1,9 +1,10 @@
 @import "variables";
 
-%placeholder{
-  padding: 20px 30px;
-}
-.button{
-  @extend %placeholder;
-  background-color: red;
+$property:margin;
+
+.box{
+  #{$property}-bottom: 20px;
+  #{$property}-top: 20px;
+  #{$property}-right: 20px;
+  #{$property}-left: 20px;
 }
