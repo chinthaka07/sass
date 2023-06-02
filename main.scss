@@ -1,9 +1,15 @@
 @import "variables";
 
-$colors:red, green, blue;
-
-@each $col in $colors {
-  .item-#{$col}{
-    color: $col;
-  }
+.button-dada{
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: green;
+}
+.child{
+  /*padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: bold;*/
+  @extend .button-dada;
+  background-color: red;
 }
