@@ -1,11 +1,9 @@
 @import "variables";
 
-$message-state:false;
+$colors:red, green, blue;
 
-.text{
-  @if $message-state{
-    color: $primary-color;
-  } @else {
-    color: $green-color;
+@each $col in $colors {
+  .item-#{$col}{
+    color: $col;
   }
 }
