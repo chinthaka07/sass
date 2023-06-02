@@ -1,10 +1,8 @@
-@import "variables";
-
-$property:margin;
+@use "sass:color";
 
 .box{
-  #{$property}-bottom: 20px;
-  #{$property}-top: 20px;
-  #{$property}-right: 20px;
-  #{$property}-left: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: color.red();
+  border: 1px solid color.adjust(color.blue(),$lightness:20%);
 }
