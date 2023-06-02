@@ -1,0 +1,11 @@
+@import "variables";
+
+$message-state:false;
+
+.text{
+  @if $message-state{
+    color: $primary-color;
+  } @else {
+    color: $green-color;
+  }
+}
