@@ -1,15 +1,9 @@
-$colors:(
-        primary-color:red,
-        secondary-color:green,
-        third-color:blue,
-);
-.box{
-  width: 100px;
-  height: 100px;
-  background-color: map-get($colors,primary-color);
-
-  &:hover{
-    background-color: green;
+@mixin h-styles{
+  h1, h2, h3, h4{
+    color: red;
   }
+}
 
+.context{
+  @include h-styles;
 }
