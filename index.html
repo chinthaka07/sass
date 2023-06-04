@@ -7,12 +7,24 @@
 </head>
 <body>
 
-<div class="context">
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
+<div class="container">
+    <h1 class="heading">Hello Team Member</h1>
+    <button class="toggle">
+        change the theme
+    </button>
 </div>
+
+<script>
+    const toggle=document.querySelector('.toggle');
+    const container=document.querySelector('.container');
+
+    toggle.addEventListener('click',()=>{
+        container.classList.toggle('dark');
+        const isDark=container.classList.contains('dark');
+        document.documentElement.style.setProperty('--primary-color',isDark? '#333':'#fff')
+        document.documentElement.style.setProperty('--secondary-color',isDark? '#ccc':'#000')
+    })
+</script>
 
 </body>
 </html>

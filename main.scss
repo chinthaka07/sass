@@ -1,9 +1,37 @@
-@mixin h-styles{
-  h1, h2, h3, h4{
-    color: red;
+$primary-c-dark: black;
+$secondary-c-dark: gray;
+$primary-c-light: white;
+$secondary-c-light: black;
+/*================*/
+$theme:'light';
+/*================*/
+
+@mixin change-theme{
+  @if $theme=='light'{
+    --primary-color:$primary-c-light;
+    --secondary-color:$secondary-c-light;
+  } @else if $theme=='dark'{
+    --primary-color:$primary-c-dark;
+    --secondary-color:$secondary-c-dark;
   }
 }
 
-.context{
-  @include h-styles;
+:root{
+  @include change-theme;
 }
+
+.container{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.heading{
+  font-size: 50px;
+}
+
+.toggle{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+
